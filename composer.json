@@ -1,0 +1,24 @@
+{
+    "name": "matusstafura/faker-commerce",
+    "type": "lib",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Matusstafura\\FakerCommerce\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Matus Stafura",
+            "email": "kobe21@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "pestphp/pest": "^1.22"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
