@@ -1,11 +1,13 @@
 <?php
 
-use Matusstafura\FakerCommerce\Faker\Faker;
+use Matusstafura\FakerCommerce\Data\Stock;
+use Matusstafura\FakerCommerce\FakerFactory;
 
 it('creates a Faker instance', function() {
-    $f = new Faker();
+    $faker = FakerFactory::create();
+    Stock::$stock = ['available', 'unavailable'];
 
-    $stock = $f->stock();
+    $stock = $faker->stock();
 
-    expect($stock)->toBe('out of stock');
+    expect($stock)->toMatch('/available|unavailable/');
 });

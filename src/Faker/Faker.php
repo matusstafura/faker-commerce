@@ -2,11 +2,14 @@
 
 namespace Matusstafura\FakerCommerce\Faker;
 
+use Matusstafura\FakerCommerce\Data\Stock;
+
 class Faker
 {
-    public function stock()
+    public function stock(): string
     {
-        return 'out of stock';
+        $stock = Stock::$stock;
+        $rand = array_rand(Stock::$stock);
+        return $stock[$rand];
     }
-
 }
