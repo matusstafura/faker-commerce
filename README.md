@@ -3,32 +3,37 @@
 ## Usage
 
 ```php
-// create lang en_EN by default
-$ff = FakerFaktory::create();
 
-// breadcrumbs with separator "/" by default
-$ff->breadcrumbs(4);
-// 'Home / Sport / Outdoor / Jerseys'
+use Matusstafura\FakerCommerce\FakerFactory;
 
-Create Category // see table for all avalailable Categories
-$ff->category('Sport');
-// 'Soccer'
+// Use a factory to initialize
+$faker = FakerFactory::create();
 
-$ff->productName();
-// 'Waterproof Printed Padded Coat'
-
-$ff->variant('size');
-// XL
-
-$ff->price(0, 100, 'SEK');
-// 34.55 SEK
+$faker->condition();
+// Very Good
 
 $ff->stock();
 // 'out of stock'
+
+```
+
+## Tests
+
+Run the tests with PHPPest
+
+```shell
+./vendor/bin/pest
 ```
 
 ## License
 
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
 ## Contribution
 
 ## Support
+
+
+## TODO
+
+Please see TODO.md file.
