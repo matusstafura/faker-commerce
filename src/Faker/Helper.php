@@ -2,13 +2,13 @@
 
 namespace Matusstafura\FakerCommerce\Faker;
 
-class Helper
+final class Helper
 {
     /**
      * @param array $field
-     * @return string
+     * @return string|int
      */
-    public static function randomize(array $field)
+    public static function randomize(array $field): string|int
     {
         $rand = array_rand($field);
         return $field[$rand];

@@ -2,7 +2,7 @@
 
 namespace Matusstafura\FakerCommerce\Data;
 
-class Stock
+final class Stock
 {
     public static array $stock = [
         "in stock",
