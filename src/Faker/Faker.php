@@ -8,8 +8,7 @@ class Faker
 {
     public function stock(): string
     {
-        $stock = Stock::$stock;
-        $rand = array_rand(Stock::$stock);
-        return $stock[$rand];
+        return Helper::randomize(Stock::$stock);
     }
+
 }
