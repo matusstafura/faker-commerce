@@ -32,4 +32,17 @@ class Faker
         return Helper::randomize(Color::$color);
     }
 
+    // WIP
+    public function __call($method, $attributes)
+    {
+        return $this->getClass($method);
+    }
+
+    // WIP
+    public function getClass($arg)
+    {
+        $c = "\Matusstafura\FakerCommerce\Data\\$arg";
+        return Helper::randomize($c::$condition);
+    }
+
 }
