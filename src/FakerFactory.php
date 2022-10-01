@@ -6,7 +6,10 @@ use Matusstafura\FakerCommerce\Faker\Faker;
 
 class FakerFactory
 {
-    public static function create()
+    /**
+     * @return Faker
+     */
+    public static function create(): Faker
     {
         return new Faker();
     }

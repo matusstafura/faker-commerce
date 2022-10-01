@@ -17,3 +17,11 @@ $ff->variant('size');
 $ff->price(0, 100, 'SEK');
 // 34.55 SEK
 ```
+
+Data to add:
+```text
+- EAN, ISBN, UPC via generators
+- payment method
+- image url
+- product url key
+```
