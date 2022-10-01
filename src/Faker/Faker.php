@@ -4,6 +4,7 @@ namespace Matusstafura\FakerCommerce\Faker;
 
 use Matusstafura\FakerCommerce\Data\Condition;
 use Matusstafura\FakerCommerce\Data\Stock;
+use Matusstafura\FakerCommerce\Data\Color;
 
 class Faker
 {
@@ -21,6 +22,14 @@ class Faker
     public function condition(): string
     {
         return Helper::randomize(Condition::$condition);
+    }
+
+    /**
+     * @return string
+     */
+    public function color(): string
+    {
+        return Helper::randomize(Color::$color);
     }
 
 }
