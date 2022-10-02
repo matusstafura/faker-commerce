@@ -29,20 +29,30 @@ class Faker
      */
     public function color(): string
     {
-        return Helper::randomize(Color::$color);
+        return Helper::randomize(Color::$colors);
     }
 
     // WIP
     public function __call($method, $attributes)
     {
-        return $this->getClass($method);
+        $class = '\\FakerCommerce\\Data\\'.$this->allClasses()[$method];
+        return (new $class)->$method();
     }
 
     // WIP
-    public function getClass($arg)
-    {
-        $c = "\Matusstafura\FakerCommerce\Data\\$arg";
-        return Helper::randomize($c::$condition);
-    }
 
+    public function allClasses()
+    {
+        $classes = ['Color', 'Condition', 'Stock'];
+        $x = [];
+
+        foreach ($classes as $cl) {
+            $y = get_class_methods('FakerCommerce\\Data\\' . $cl);
+            foreach ($y as $yy) {
+                $x[$yy] = $cl;
+            }
+        }
+
+        return $x;
+    }
 }

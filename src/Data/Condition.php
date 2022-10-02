@@ -2,6 +2,8 @@
 
 namespace FakerCommerce\Data;
 
+use FakerCommerce\Faker\Helper;
+
 final class Condition
 {
     public static array $condition = [
@@ -20,4 +22,9 @@ final class Condition
         "Acceptable",
         "For parts or not working",
     ];
+
+    public function condition()
+    {
+        return Helper::randomize(self::$condition);
+    }
 }

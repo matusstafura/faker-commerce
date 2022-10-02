@@ -2,9 +2,11 @@
 
 namespace FakerCommerce\Data;
 
+use FakerCommerce\Faker\Helper;
+
 final class Color
 {
-    public static array $color =
+    public static array $colors =
         [
             "AliceBlue", "AntiqueWhite", "Aqua", "Aquamarine", "Azure", "Beige", "Bisque", "Black",
             "BlanchedAlmond", "Blue", "BlueViolet", "Brown", "BurlyWood", "CadetBlue", "Chartreuse",
@@ -28,4 +30,8 @@ final class Color
             "White", "WhiteSmoke", "Yellow", "YellowGreen",
         ];
 
+    public function color()
+    {
+        return Helper::randomize(self::$colors);
+    }
 }
