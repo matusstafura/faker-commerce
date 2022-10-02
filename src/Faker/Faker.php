@@ -1,10 +1,10 @@
 <?php
 
-namespace Matusstafura\FakerCommerce\Faker;
+namespace FakerCommerce\Faker;
 
-use Matusstafura\FakerCommerce\Data\Condition;
-use Matusstafura\FakerCommerce\Data\Stock;
-use Matusstafura\FakerCommerce\Data\Color;
+use FakerCommerce\Data\Color;
+use FakerCommerce\Data\Condition;
+use FakerCommerce\Data\Stock;
 
 class Faker
 {

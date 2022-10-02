@@ -1,8 +1,8 @@
 <?php
 
-namespace Matusstafura\FakerCommerce;
+namespace FakerCommerce;
 
-use Matusstafura\FakerCommerce\Faker\Faker;
+use FakerCommerce\Faker\Faker;
 
 class FakerFactory
 {

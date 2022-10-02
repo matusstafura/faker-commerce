@@ -1,6 +1,6 @@
 <?php
 
-namespace Matusstafura\FakerCommerce\Faker;
+namespace FakerCommerce\Faker;
 
 final class Helper
 {

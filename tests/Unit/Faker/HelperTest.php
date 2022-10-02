@@ -1,6 +1,6 @@
 <?php
 
-use Matusstafura\FakerCommerce\Faker\Helper;
+use FakerCommerce\Faker\Helper;
 
 it('randomizes an input', function() {
     $input = [1, 2, 3, 4];

@@ -1,6 +1,6 @@
 <?php
 
-namespace Matusstafura\FakerCommerce\Data;
+namespace FakerCommerce\Data;
 
 final class Condition
 {

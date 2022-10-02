@@ -1,7 +1,7 @@
 <?php
 
-use Matusstafura\FakerCommerce\Data\Stock;
-use Matusstafura\FakerCommerce\FakerFactory;
+use FakerCommerce\Data\Stock;
+use FakerCommerce\FakerFactory;
 
 it('creates a Faker instance', function() {
     $faker = FakerFactory::create();
