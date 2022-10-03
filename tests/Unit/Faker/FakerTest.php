@@ -1,13 +1,11 @@
 <?php
 
-use FakerCommerce\Data\Stock;
 use FakerCommerce\FakerFactory;
 
-it('creates a Faker instance', function() {
-    $faker = FakerFactory::create();
-    Stock::$stock = ['available', 'unavailable'];
-
-    $stock = $faker->availability();
-
-    expect($stock)->toMatch('/available|unavailable/');
+beforeEach(function() {
+    $this->faker = FakerFactory::create();
 });
+
+it('throws exception if method does not exists', function () {
+    $this->faker->methodLikeThisDoesNotExistAlright();
+})->throws(\InvalidArgumentException::class);

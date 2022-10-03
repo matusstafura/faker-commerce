@@ -4,7 +4,7 @@ namespace FakerCommerce\Data;
 
 class Stock extends Data
 {
-    public static array $stock = [
+    protected static array $stock = [
         "in stock",
         "out of stock"
     ];

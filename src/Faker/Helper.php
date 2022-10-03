@@ -5,7 +5,7 @@ namespace FakerCommerce\Faker;
 final class Helper
 {
     /**
-     * @param array $field
+     * @param array<int|string> $field
      * @return string|int
      */
     public static function randomize(array $field): string|int

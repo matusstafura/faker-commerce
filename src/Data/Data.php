@@ -6,7 +6,11 @@ use FakerCommerce\Faker\Helper;
 
 abstract class Data
 {
-    public function randomize($arg): int|string
+    /**
+     * @param array<int|string> $arg
+     * @return int|string
+     */
+    public function randomize(array $arg): int|string
     {
         return Helper::randomize($arg);
     }

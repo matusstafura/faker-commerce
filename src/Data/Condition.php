@@ -4,7 +4,7 @@ namespace FakerCommerce\Data;
 
 class Condition extends Data
 {
-    public static array $condition = [
+    protected static array $condition = [
         "New",
         "New other (see details)",
         "New with defects",

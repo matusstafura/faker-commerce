@@ -4,7 +4,7 @@ namespace FakerCommerce\Data;
 
 class Color extends Data
 {
-    public static array $colors =
+    protected static array $colors =
         [
             "AliceBlue", "AntiqueWhite", "Aqua", "Aquamarine", "Azure", "Beige", "Bisque", "Black",
             "BlanchedAlmond", "Blue", "BlueViolet", "Brown", "BurlyWood", "CadetBlue", "Chartreuse",
