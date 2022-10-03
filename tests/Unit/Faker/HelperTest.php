@@ -4,7 +4,8 @@ use FakerCommerce\Faker\Helper;
 
 it('randomizes an input', function() {
     $input = [1, 2, 3, 4];
-    $faker = Helper::randomize($input);
+    $random = Helper::randomize($input);
 
-    expect($input)->toContain($faker)->not->toContain(5);
+    expect($input)->toContain($random)->not->toContain(5);
 });
+

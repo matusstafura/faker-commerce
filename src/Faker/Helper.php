@@ -13,4 +13,9 @@ final class Helper
         $rand = array_rand($field);
         return $field[$rand];
     }
+
+    public static function randomNumber(int $min, int $max): int
+    {
+        return mt_rand($min, $max);
+    }
 }

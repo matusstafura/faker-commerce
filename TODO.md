@@ -18,6 +18,8 @@ $ff->price(0, 100, 'SEK');
 // 34.55 SEK
 ```
 
+- check if method exists
+
 Data to add:
 ```text
 - EAN, ISBN, UPC via generators
