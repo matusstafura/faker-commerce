@@ -2,9 +2,7 @@
 
 namespace FakerCommerce\Data;
 
-use FakerCommerce\Faker\Helper;
-
-final class Condition
+class Condition extends Data
 {
     public static array $condition = [
         "New",
@@ -25,6 +23,6 @@ final class Condition
 
     public function condition(): string
     {
-        return Helper::randomize(self::$condition);
+        return self::randomize(self::$condition);
     }
 }

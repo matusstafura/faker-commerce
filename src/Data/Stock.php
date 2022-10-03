@@ -2,9 +2,7 @@
 
 namespace FakerCommerce\Data;
 
-use FakerCommerce\Faker\Helper;
-
-final class Stock
+class Stock extends Data
 {
     public static array $stock = [
         "in stock",
@@ -13,7 +11,7 @@ final class Stock
 
     public function availability(): string
     {
-        return Helper::randomize(self::$stock);
+        return self::randomize(self::$stock);
     }
 
 }

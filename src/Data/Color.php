@@ -2,9 +2,7 @@
 
 namespace FakerCommerce\Data;
 
-use FakerCommerce\Faker\Helper;
-
-final class Color
+class Color extends Data
 {
     public static array $colors =
         [
@@ -32,6 +30,6 @@ final class Color
 
     public function color(): string
     {
-        return Helper::randomize(self::$colors);
+        return self::randomize(self::$colors);
     }
 }
