@@ -23,7 +23,7 @@ final class Condition
         "For parts or not working",
     ];
 
-    public function condition()
+    public function condition(): string
     {
         return Helper::randomize(self::$condition);
     }

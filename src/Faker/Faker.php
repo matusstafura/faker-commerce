@@ -2,57 +2,31 @@
 
 namespace FakerCommerce\Faker;
 
-use FakerCommerce\Data\Color;
-use FakerCommerce\Data\Condition;
-use FakerCommerce\Data\Stock;
-
 class Faker
 {
-    /**
-     * @return string
-     */
-    public function stock(): string
-    {
-        return Helper::randomize(Stock::$stock);
-    }
+    public array $datasets = ['Color', 'Condition', 'Stock'];
 
-    /**
-     * @return string
-     */
-    public function condition(): string
-    {
-        return Helper::randomize(Condition::$condition);
-    }
+    public const DATASET_NAMESPACE = 'FakerCommerce\\Data\\';
 
-    /**
-     * @return string
-     */
-    public function color(): string
-    {
-        return Helper::randomize(Color::$colors);
-    }
-
-    // WIP
     public function __call($method, $attributes)
     {
-        $class = '\\FakerCommerce\\Data\\'.$this->allClasses()[$method];
-        return (new $class)->$method();
+        if ($this->findMethod($method) !== null) {
+            $class = key($this->findMethod($method));
+            return (new $class)->$method();
+        }
     }
 
-    // WIP
-
-    public function allClasses()
+    function findMethod($arg): array
     {
-        $classes = ['Color', 'Condition', 'Stock'];
-        $x = [];
-
-        foreach ($classes as $cl) {
-            $y = get_class_methods('FakerCommerce\\Data\\' . $cl);
-            foreach ($y as $yy) {
-                $x[$yy] = $cl;
+        foreach ($this->datasets as $class) {
+            $full = self::DATASET_NAMESPACE . $class;
+            if (method_exists($full, $arg)) {
+                $match[$full] = $arg;
+                return $match;
             }
         }
 
-        return $x;
+        throw new \InvalidArgumentException(sprintf('method "%s" not found', $arg));
     }
+
 }

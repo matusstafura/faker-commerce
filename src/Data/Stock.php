@@ -11,13 +11,9 @@ final class Stock
         "out of stock"
     ];
 
-    public function availability()
+    public function availability(): string
     {
         return Helper::randomize(self::$stock);
     }
 
-    public function dump()
-    {
-        return "DUMP";
-    }
 }

@@ -30,7 +30,7 @@ final class Color
             "White", "WhiteSmoke", "Yellow", "YellowGreen",
         ];
 
-    public function color()
+    public function color(): string
     {
         return Helper::randomize(self::$colors);
     }

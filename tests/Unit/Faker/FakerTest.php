@@ -7,7 +7,7 @@ it('creates a Faker instance', function() {
     $faker = FakerFactory::create();
     Stock::$stock = ['available', 'unavailable'];
 
-    $stock = $faker->stock();
+    $stock = $faker->availability();
 
     expect($stock)->toMatch('/available|unavailable/');
 });
