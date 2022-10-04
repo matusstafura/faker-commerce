@@ -15,8 +15,4 @@ abstract class Data
         return Helper::randomize($arg);
     }
 
-    public static function isbn10()
-    {
-        return Helper::randomNumber(1111111111,9999999999);
-    }
 }

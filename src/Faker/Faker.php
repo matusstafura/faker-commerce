@@ -4,7 +4,7 @@ namespace FakerCommerce\Faker;
 
 class Faker
 {
-    protected array $datasets = ['Color', 'Condition', 'Stock'];
+    public array $datasets = ['Color', 'Condition', 'Stock', 'Payment'];
 
     public const DATASET_NAMESPACE = 'FakerCommerce\\Data\\';
 

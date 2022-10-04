@@ -2,9 +2,10 @@
 
 use FakerCommerce\Data\Data;
 
-it("generates ISBN number", function () {
-    $isbn = Data::isbn10();
+it("gets random element from an array", function () {
+    $arr = [1,2,3];
 
-    expect($isbn)->toBeInt()
-        ->and((string)$isbn)->toHaveLength(10);
+    $random = Data::randomize($arr);
+
+    expect($arr)->toContain($random)->not()->toContain(4);
 });
