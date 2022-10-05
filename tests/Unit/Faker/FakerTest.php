@@ -1,6 +1,6 @@
 <?php
 
-use FakerCommerce\Data\Color;
+use FakerCommerce\Data\Category;
 use FakerCommerce\Data\Data;
 use FakerCommerce\FakerFactory;
 
@@ -12,7 +12,7 @@ it('throws exception if method does not exists', function () {
     $this->faker->methodLikeThisDoesNotExistAlright();
 })->throws(\InvalidArgumentException::class);
 
-it('belongs to', function () {
-    $c = new Color();
-    expect($c)->toBeInstanceOf(Color::class);
+it('concrete faker class is instance of base class', function () {
+    $c = new Category();
+    expect($c)->toBeInstanceOf(Data::class);
 });
