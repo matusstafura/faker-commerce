@@ -4,7 +4,7 @@ namespace FakerCommerce\Faker;
 
 class Faker
 {
-    public array $datasets = ['Color', 'Condition', 'Stock', 'Payment'];
+    public array $datasets = ['Color', 'Condition', 'Stock', 'Payment', 'Category'];
 
     public const DATASET_NAMESPACE = 'FakerCommerce\\Data\\';
 
@@ -12,7 +12,7 @@ class Faker
     {
         if ($this->findMethod($method) !== null) {
             $class = key($this->findMethod($method));
-            return (new $class)->$method();
+            return (new $class)->$method(...$attributes);
         }
     }
 
