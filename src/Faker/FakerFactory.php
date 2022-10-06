@@ -9,7 +9,16 @@ class FakerFactory
      */
     public static function create(): Faker
     {
-        return new Faker();
+        $datasets = [
+            'FakerCommerce\Data\Color',
+            'FakerCommerce\Data\Category',
+            'FakerCommerce\Data\Color',
+            'FakerCommerce\Data\Condition',
+            'FakerCommerce\Data\Payment',
+            'FakerCommerce\Data\Stock',
+        ];
+
+        return new Faker($datasets);
     }
 
 }

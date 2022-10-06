@@ -4,9 +4,10 @@ namespace FakerCommerce\Faker;
 
 class Faker
 {
-    public array $datasets = ['Color', 'Condition', 'Stock', 'Payment', 'Category'];
 
-    public const DATASET_NAMESPACE = 'FakerCommerce\\Data\\';
+    public function __construct(public array $datasets)
+    {
+    }
 
     public function __call(string $method, array $attributes)
     {
@@ -23,14 +24,23 @@ class Faker
     function findMethod(string $arg): array
     {
         foreach ($this->datasets as $class) {
-            $full = self::DATASET_NAMESPACE . $class;
-            if (method_exists($full, $arg)) {
-                $match[$full] = $arg;
+            if (method_exists($class, $arg)) {
+                $match[$class] = $arg;
                 return $match;
             }
         }
 
         throw new \InvalidArgumentException(sprintf('Method: "%s" not found', $arg));
+    }
+
+    function getAllMethods(): array
+    {
+        $all = [];
+        foreach ($this->datasets as $class) {
+            $all[$class] = get_class_methods($class);
+        }
+
+        return $all;
     }
 
 }

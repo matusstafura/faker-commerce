@@ -10,7 +10,7 @@ abstract class Data
      * @param array<int|string> $arg
      * @return int|string
      */
-    public static function randomize(array $arg): int|string
+    protected static function randomize(array $arg): int|string
     {
         return Helper::randomize($arg);
     }
