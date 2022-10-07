@@ -9,8 +9,8 @@ class FakerFactory
      */
     public static function create(): Faker
     {
-        $defaultDataset = (new Dataset)->datasets;
-        return new Faker($defaultDataset);
+        $datasets = (new Dataset)->getDatasets();
+        return new Faker($datasets);
     }
 
 }

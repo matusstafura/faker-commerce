@@ -2,10 +2,10 @@
 
 use FakerCommerce\Data\Category;
 use FakerCommerce\Data\Data;
-use FakerCommerce\Faker\Dataset;
+use FakerCommerce\Faker\FakerFactory;
 
 beforeEach(function() {
-    $this->faker = Dataset::create();
+    $this->faker = FakerFactory::create();
 });
 
 it('throws exception if method does not exists', function () {
