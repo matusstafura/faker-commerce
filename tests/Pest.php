@@ -24,6 +24,10 @@
 |
 */
 
+function dd($arg) {
+    return die(var_dump($arg));
+}
+
 expect()->extend('toBeOne', function () {
     return $this->toBe(1);
 });
