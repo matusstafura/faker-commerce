@@ -40,7 +40,18 @@ class Faker
             $all[$class] = get_class_methods($class);
         }
 
+        $this->findDuplicateMethods($all);
+
         return $all;
+    }
+
+    private function findDuplicateMethods(array $methods): void
+    {
+        $duplicates = array_merge(...array_values($methods));
+
+        if (count($duplicates) != count(array_unique($duplicates))) {
+            throw new \Exception("The method with the same name already exists. Please, rename the method.");
+        }
     }
 
 }

@@ -4,7 +4,7 @@ use FakerCommerce\Data\Category;
 use FakerCommerce\Data\Data;
 use FakerCommerce\Faker\FakerFactory;
 
-beforeEach(function() {
+beforeEach(function () {
     $this->faker = FakerFactory::create();
 });
 
