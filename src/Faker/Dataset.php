@@ -10,6 +10,7 @@ class Dataset
         'FakerCommerce\Data\Condition',
         'FakerCommerce\Data\Payment',
         'FakerCommerce\Data\Stock',
+        'FakerCommerce\Data\Price',
     ];
 
     public function addDataset(string $dataset): void
