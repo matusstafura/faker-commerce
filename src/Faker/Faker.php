@@ -2,7 +2,7 @@
 
 namespace FakerCommerce\Faker;
 
-class Faker
+final class Faker
 {
 
     public function __construct(public array $datasets)
@@ -45,7 +45,7 @@ class Faker
         return $all;
     }
 
-    private function findDuplicateMethods(array $methods): void
+    public function findDuplicateMethods(array $methods): void
     {
         $duplicates = array_merge(...array_values($methods));
 
