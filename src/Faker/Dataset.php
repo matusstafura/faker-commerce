@@ -5,12 +5,13 @@ namespace FakerCommerce\Faker;
 class Dataset
 {
     private array $datasets = [
-        'FakerCommerce\Data\Color',
         'FakerCommerce\Data\Category',
+        'FakerCommerce\Data\Color',
         'FakerCommerce\Data\Condition',
+        'FakerCommerce\Data\Name',
         'FakerCommerce\Data\Payment',
-        'FakerCommerce\Data\Stock',
         'FakerCommerce\Data\Price',
+        'FakerCommerce\Data\Stock',
     ];
 
     public function addDataset(string $dataset): void

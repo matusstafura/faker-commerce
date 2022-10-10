@@ -9,6 +9,9 @@ use FakerCommerce\Faker\FakerFactory;
 // Use a factory to initialize
 $faker = FakerFactory::create();
 
+$faker->name();
+// leather shorts
+
 $faker->condition();
 // "Very Good"
 
