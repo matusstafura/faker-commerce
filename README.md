@@ -9,25 +9,35 @@ use FakerCommerce\Faker\FakerFactory;
 // Use a factory to initialize
 $faker = FakerFactory::create();
 
-$faker->name();
-// leather shorts
-
-$faker->condition();
-// "Very Good"
-
-$faker->stock();
+$faker->availability();
 // "out of stock"
-
-$faker->category();
-// "Action Figures"
-
-$faker->payment();
-// "cash on delivery"
 
 $faker->breadcrumbs(4, ">");
 // "Radio>Instruments>Materials & Supplies>Accessories"
 
+$faker->category();
+// "Action Figures"
+
+$faker->color();
+// "Coral"
+
+$faker->condition();
+// "Very Good"
+
+$faker->name();
+// leather shorts
+
+$faker->payment();
+// "cash on delivery"
+
+$faker->price();
+// "cash on delivery"
+
+$f->getAllMethods();
+// will list all available methods
+
 ```
+
 
 ## Tests
 

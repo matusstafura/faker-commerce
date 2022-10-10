@@ -3,8 +3,10 @@
 ```php
 
 $faker->variant('size');
-// XL
+// "XL"
 
+$faker->review();
+// "It's impossible to read this without becoming ravenous!"
 ```
 
 Data to add:
