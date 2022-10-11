@@ -44,7 +44,7 @@ $f->getAllMethods();
 Run the tests with Pest PHP
 
 ```shell
-./vendor/bin/pest
+composer test
 ```
 
 ## License

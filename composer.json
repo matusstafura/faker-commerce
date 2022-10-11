@@ -1,5 +1,10 @@
 {
     "name": "matusstafura/faker-commerce",
+    "description": "A PHP lib to generate dummy data for ecommerce",
+    "keywords": [
+        "matusstafura",
+        "faker"
+    ],
     "type": "lib",
     "license": "MIT",
     "autoload": {
@@ -10,7 +15,8 @@
     "authors": [
         {
             "name": "Matus Stafura",
-            "email": "kobe21@gmail.com"
+            "email": "kobe21@gmail.com",
+            "role": "Developer"
         }
     ],
     "require-dev": {
@@ -22,5 +28,8 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
+    },
+    "scripts": {
+        "test": "./vendor/bin/pest"
     }
 }
