@@ -34,10 +34,9 @@ $faker->price();
 // "cash on delivery"
 
 $f->getAllMethods();
-// will list all available methods
+// lists all available methods
 
 ```
-
 
 ## Tests
 

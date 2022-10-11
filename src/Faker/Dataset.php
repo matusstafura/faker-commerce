@@ -4,7 +4,7 @@ namespace FakerCommerce\Faker;
 
 class Dataset
 {
-    private array $datasets = [
+    private static array $datasets = [
         'FakerCommerce\Data\Category',
         'FakerCommerce\Data\Color',
         'FakerCommerce\Data\Condition',
@@ -16,16 +16,16 @@ class Dataset
 
     public function addDataset(string $dataset): void
     {
-        if (in_array($dataset, $this->datasets)) {
+        if (in_array($dataset, self::$datasets)) {
             throw new \InvalidArgumentException("Dataset already exists.");
         }
 
-        $this->datasets[] = $dataset;
+        self::$datasets[] = $dataset;
     }
 
     public function getDatasets(): array
     {
-        return $this->datasets;
+        return self::$datasets;
     }
 
 }
