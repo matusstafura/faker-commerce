@@ -31,7 +31,10 @@ $faker->payment();
 // "cash on delivery"
 
 $faker->price();
-// "cash on delivery"
+// "557.00"
+
+$faker->review();
+// "Expensive for the quality."
 
 $f->getAllMethods();
 // lists all available methods

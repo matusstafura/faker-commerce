@@ -11,6 +11,7 @@ class Dataset
         'FakerCommerce\Data\Name',
         'FakerCommerce\Data\Payment',
         'FakerCommerce\Data\Price',
+        'FakerCommerce\Data\Review',
         'FakerCommerce\Data\Stock',
     ];
 

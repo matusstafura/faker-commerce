@@ -1,12 +1,12 @@
 # TODO
 
+- language support
+
 ```php
 
-$faker->variant('size');
+$faker->variant('size'); or $faker->size();
 // "XL"
 
-$faker->review();
-// "It's impossible to read this without becoming ravenous!"
 ```
 
 Data to add:
