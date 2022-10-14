@@ -1,5 +1,12 @@
 # PHP Faker eCommerce
 
+Generates dummy data related mostly for ecommerce use.
+
+## Install the package
+```shell
+composer require matusstafura/faker-commerce
+```
+
 ## Usage
 
 ```php
@@ -51,13 +58,15 @@ composer test
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
 
 ## Contribution
 
 Contributions are welcome and will be fully credited. Please, add tests if required.
 
 ## Support
+
+You can leave a star.
 
 ## Security
 
